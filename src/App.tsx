@@ -1,5 +1,19 @@
+import AddForm from "./components/addForm";
+import Header from "./components/header";
+import List from "./components/list";
+
 const App = () => {
-  return <h1 className="text-center font-bold capitalize"> this is header</h1>;
+  return (
+    <main className="relative h-full">
+      <Header></Header>
+      <div className="flex gap-4 m-6">
+        <List name="Doing"></List>
+        <List name="In Progress"></List>
+        <List name="Done"></List>
+      </div>
+      {/*<AddForm></AddForm>*/}
+    </main>
+  );
 };
 
 export default App;
