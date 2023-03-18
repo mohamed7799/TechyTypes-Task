@@ -1,8 +1,10 @@
+//interfaces
 interface CardProps {
   item: Task;
 }
 
 const Card = ({ item }: CardProps) => {
+  //functions
   const dragStarted = (e: any, id: string) => {
     e.dataTransfer.setData("itemID", id);
   };

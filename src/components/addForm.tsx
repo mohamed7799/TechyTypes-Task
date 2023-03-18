@@ -4,16 +4,20 @@ import ListContext from "../contexts/listContext";
 import FormTypeContext from "../contexts/formTypeContext";
 import { v4 as uuidv4 } from "uuid";
 
+//interfaces
 interface AddFormProps {
   closeForm: Function;
   type?: string;
 }
 
 const AddForm = ({ closeForm, type }: AddFormProps) => {
+  //state
   const [formTitle, setFormTitle] = useState("");
   const [formDescription, setFormDescription] = useState("");
   const { list, setList } = useContext(ListContext);
   const { currentForm } = useContext(FormTypeContext);
+
+  //functions
   const submitTask = (e: React.SyntheticEvent) => {
     e.preventDefault();
     const newTask: Task = {
@@ -25,6 +29,7 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
     setList([...list, newTask]);
     closeForm();
   };
+
   return (
     <div className="bg-gray-400/50 flex justify-center items-center absolute inset-0">
       <form

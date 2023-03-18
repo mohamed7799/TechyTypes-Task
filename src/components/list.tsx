@@ -32,14 +32,15 @@ const List = ({ name, openForm }: Listprops) => {
   };
 
   return (
-    <div className="p-3 rounded-md shadow-md border w-full h-fit">
-      <h2 className="font-bold">{name}</h2>
-      <hr className="my-3" />
+    <div className="rounded-md shadow-md border w-full h-fit">
+      <h2 className="font-bold p-2 bg-blue-500 text-white rounded-t text-xl">
+        {name}
+      </h2>
 
       <div
         onDragOver={(e) => draggingOver(e)}
         onDrop={(e) => dragEnd(e)}
-        className="flex flex-col gap-3 min-h-[30px]"
+        className="p-3 flex flex-col gap-3 min-h-[30px]"
       >
         {list
           .filter((item: Task) => item.type === name)
