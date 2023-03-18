@@ -1,15 +1,22 @@
 interface CardProps {
-  cardTitle: string;
-  cardDescription: string;
+  item: Task;
 }
 
-const Card = ({ cardTitle, cardDescription }: CardProps) => {
+const Card = ({ item }: CardProps) => {
+  const dragStarted = (e: any, id: string) => {
+    e.dataTransfer.setData("itemID", id);
+  };
+
   return (
-    <div className="p-3 rounded-md border cursor-pointer">
+    <div
+      draggable
+      onDragStart={(e) => dragStarted(e, item.id)}
+      className="p-3 rounded-md border cursor-pointer"
+    >
       <h3 className="capitalize mb-2 font-semibold text-gray-600">
-        {cardTitle}
+        {item.title}
       </h3>
-      <p>{cardDescription}</p>
+      <p>{item.description}</p>
     </div>
   );
 };

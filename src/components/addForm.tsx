@@ -22,7 +22,6 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
       type: currentForm,
       id: uuidv4(),
     };
-    console.log(newTask);
     setList([...list, newTask]);
     closeForm();
   };
