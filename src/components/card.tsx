@@ -1,3 +1,5 @@
+import Task from "../interfaces/TaskInterface";
+
 //interfaces
 interface CardProps {
   item: Task;

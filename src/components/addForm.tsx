@@ -3,6 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import ListContext from "../contexts/listContext";
 import FormTypeContext from "../contexts/formTypeContext";
 import { v4 as uuidv4 } from "uuid";
+import Task from "../interfaces/TaskInterface";
 
 //interfaces
 interface AddFormProps {

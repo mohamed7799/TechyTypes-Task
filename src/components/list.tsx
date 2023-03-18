@@ -3,6 +3,7 @@ import Card from "./card";
 import { useContext } from "react";
 import FormTypeContext from "../contexts/formTypeContext";
 import ListContext from "../contexts/listContext";
+import Task from "../interfaces/TaskInterface";
 
 //interfaces
 interface Listprops {

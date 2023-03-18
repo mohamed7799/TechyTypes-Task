@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Task from "../interfaces/TaskInterface";
 
 const getSavedValue = (key: string, initVal: Task[]) => {
   const savedVal = JSON.parse(localStorage.getItem(key)!);
