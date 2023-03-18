@@ -1,6 +1,14 @@
 import { createContext, useState } from "react";
 
-const FormTypeContext = createContext<any>(null);
+interface FormTypeContextInterface {
+  currentForm: string;
+  setCurrentForm: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const FormTypeContext = createContext<FormTypeContextInterface>({
+  currentForm: "Doing",
+  setCurrentForm: () => {},
+});
 
 type Props = {
   children: JSX.Element;

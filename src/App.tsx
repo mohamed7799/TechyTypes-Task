@@ -1,9 +1,9 @@
 import { useState } from "react";
-import AddForm from "./components/addForm";
-import Header from "./components/header";
-import List from "./components/list";
 import { FormTypeContextProvider } from "./contexts/formTypeContext";
 import { ListContextProvider } from "./contexts/listContext";
+import List from "./components/list";
+import Header from "./components/header";
+import AddForm from "./components/addForm";
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
