@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*custome classes*/
+
+@layer components {
+  .addForm__label {
+    @apply rounded-md bg-blue-100 text-blue-600 mb-3 p-2 flex items-center gap-2;
+  }
+}

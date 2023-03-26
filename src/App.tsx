@@ -20,7 +20,7 @@ const App = () => {
   return (
     <ListContextProvider>
       <FormTypeContextProvider>
-        <main className="relative min-h-full">
+        <main className=" min-h-full">
           <Header></Header>
           <div className="flex gap-4 my-6 mx-auto container">
             <UserInfo />
