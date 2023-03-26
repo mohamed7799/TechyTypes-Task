@@ -5,6 +5,7 @@ import List from "./components/list";
 import Header from "./components/header";
 import AddForm from "./components/addForm";
 import UserInfo from "./components/userInfo";
+import ToolBar from "./components/toolbar";
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
@@ -22,12 +23,15 @@ const App = () => {
       <FormTypeContextProvider>
         <main className=" min-h-full">
           <Header></Header>
-          <div className="flex gap-4 my-6 mx-auto container">
+          <div className="flex gap-3 my-6 mx-auto container">
             <UserInfo />
-            <div className="flex gap-4 mx-auto max-w-7xl flex-[4_4_0%]">
-              <List openForm={openForm} name="To Do"></List>
-              <List openForm={openForm} name="In Progress"></List>
-              <List openForm={openForm} name="Done"></List>
+            <div className=" mx-auto max-w-7xl flex-[4_4_0%]">
+              <ToolBar></ToolBar>
+              <div className="flex gap-3">
+                <List openForm={openForm} name="To Do"></List>
+                <List openForm={openForm} name="In Progress"></List>
+                <List openForm={openForm} name="Done"></List>
+              </div>
             </div>
           </div>
 

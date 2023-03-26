@@ -34,14 +34,14 @@ const List = ({ name, openForm }: Listprops) => {
   };
 
   return (
-    <div className="rounded-md shadow-md border w-full h-fit p-4">
-      <h2 className="font-bold flex items-center rounded-t text-xl">
+    <div className="rounded-md shadow-sm border w-full h-fit p-4 bg-white">
+      <h2 className="font-bold flex items-center rounded-t text-lg">
         {name}
         <span className="ml-auto text-2xl text-blue-600">
           <BsThreeDotsVertical></BsThreeDotsVertical>
         </span>
       </h2>
-      <hr className="my-4" />
+      <hr className="my-3" />
       <div
         onDragOver={(e) => draggingOver(e)}
         onDrop={(e) => dragEnd(e)}

@@ -9,4 +9,8 @@
   .addForm__label {
     @apply rounded-md bg-blue-100 text-blue-600 mb-3 p-2 flex items-center gap-2 cursor-pointer;
   }
+
+  .toolbar__item {
+    @apply flex bg-white items-center shadow-sm rounded-md py-1 px-3 border cursor-pointer;
+  }
 }

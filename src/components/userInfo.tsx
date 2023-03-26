@@ -5,8 +5,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 import UserImage from "./userImage";
 const UserInfo = () => {
   return (
-    <div className="rounded-md shadow-md border w-full h-fit p-4 flex-1">
-      <div className="flex gap-3 font-bold">
+    <div className="rounded-md shadow-md border w-full h-fit p-4 flex-1 bg-white">
+      <div className="flex gap-3 font-bold items-center">
         <UserImage />
         <div>
           <h3>Lucinde</h3>
