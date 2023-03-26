@@ -1,4 +1,5 @@
 import { AiOutlinePlus } from "react-icons/ai";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import Card from "./card";
 import { useContext } from "react";
 import FormTypeContext from "../contexts/formTypeContext";
@@ -33,15 +34,18 @@ const List = ({ name, openForm }: Listprops) => {
   };
 
   return (
-    <div className="rounded-md shadow-md border w-full h-fit">
-      <h2 className="font-bold p-2 bg-blue-500 text-white rounded-t text-xl">
+    <div className="rounded-md shadow-md border w-full h-fit p-4">
+      <h2 className="font-bold flex items-center rounded-t text-xl">
         {name}
+        <span className="ml-auto text-2xl text-blue-600">
+          <BsThreeDotsVertical></BsThreeDotsVertical>
+        </span>
       </h2>
-
+      <hr className="my-4" />
       <div
         onDragOver={(e) => draggingOver(e)}
         onDrop={(e) => dragEnd(e)}
-        className="p-3 flex flex-col gap-3 min-h-[30px]"
+        className=" flex flex-col gap-3 min-h-[20px]"
       >
         {list
           .filter((item: Task) => item.type === name)
@@ -55,7 +59,7 @@ const List = ({ name, openForm }: Listprops) => {
           setCurrentForm(name);
           openForm();
         }}
-        className="border rounded p-2 hover:border-blue-500 hover:border-2 m-2 flex gap-2 items-center text-lg cursor-pointer"
+        className="p-2 m-2 flex gap-2 items-center text-lg cursor-pointer"
       >
         <AiOutlinePlus className="text-blue-500"></AiOutlinePlus>
         <span className="text-gray-500">Add new Card</span>

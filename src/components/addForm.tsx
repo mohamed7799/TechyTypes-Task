@@ -32,18 +32,13 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
   };
 
   return (
-    <div className="bg-gray-400/50 flex justify-center items-center absolute inset-0">
+    <div className="bg-blue-700/90 flex justify-center items-center absolute inset-0">
       <form
         onSubmit={(e) => submitTask(e)}
         className="w-1/2 bg-white rounded border flex flex-col gap-3 p-6"
       >
-        <AiOutlineClose
-          onClick={() => closeForm()}
-          className="ml-auto text-2xl cursor-pointer"
-        ></AiOutlineClose>
-
-        <label className="font-bold" htmlFor="title">
-          Title
+        <label className="font-bold text-lg" htmlFor="title">
+          Card Title
         </label>
         <input
           className="rounded border-2 focus:outline-none p-2"
@@ -52,7 +47,7 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
           value={formTitle}
           onChange={(e) => setFormTitle(e.target.value)}
         />
-        <label className="font-bold" htmlFor="description">
+        <label className="font-bold text-lg" htmlFor="description">
           Description
         </label>
         <textarea
@@ -61,10 +56,15 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
           value={formDescription}
           onChange={(e) => setFormDescription(e.target.value)}
         />
-
-        <button className="bg-blue-500 text-white font-bold px-6 py-3 rounded">
-          Add
-        </button>
+        <div className="flex gap-3 items-center">
+          <button className="bg-blue-500 text-white font-bold px-6 py-3 rounded w-fit">
+            Save
+          </button>
+          <AiOutlineClose
+            onClick={() => closeForm()}
+            className="text-3xl cursor-pointer"
+          ></AiOutlineClose>
+        </div>
       </form>
     </div>
   );
