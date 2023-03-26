@@ -18,7 +18,8 @@ import ListContext from "../contexts/listContext";
 import FormTypeContext from "../contexts/formTypeContext";
 import { v4 as uuidv4 } from "uuid";
 import Task from "../interfaces/TaskInterface";
-import pfp from "/src/assets/pfp.jpg";
+import UserImage from "./userImage";
+
 //interfaces
 interface AddFormProps {
   closeForm: Function;
@@ -81,7 +82,7 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
             ></AiOutlineClose>
           </div>
           <div className="flex gap-2 mt-4">
-            <img className="w-12 rounded-full" src={pfp} alt="pfp" />
+            <UserImage />
             <input
               className="outline-none border rounded-md p-2 w-full"
               type="text"
