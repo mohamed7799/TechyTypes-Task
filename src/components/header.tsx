@@ -5,8 +5,8 @@ import { AiOutlineBell, AiOutlineSearch } from "react-icons/ai";
 import UserImage from "./userImage";
 const Header = () => {
   return (
-    <div className="p-3 shadow-sm bg-white mx-auto mt-4 rounded-md container flex items-center">
-      <ul className="flex gap-8 font-semibold">
+    <div className="p-3 shadow-sm bg-white mx-auto rounded-md container flex items-center">
+      <ul className="flex gap-4">
         <li className="flex gap-2 items-center cursor-pointer">
           Workspace <BsChevronDown />
         </li>

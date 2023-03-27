@@ -5,7 +5,7 @@
 
 ## How to run the project
 
-after cloning the project go the project directory and run these commands
+after cloning the project go to the project directory and run these commands
 
 ```
 npm install

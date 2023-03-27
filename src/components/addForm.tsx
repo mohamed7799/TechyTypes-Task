@@ -123,13 +123,13 @@ const AddForm = ({ closeForm, type }: AddFormProps) => {
           <h3 className="text-lg font-bold mb-3">Power-Ups</h3>
           <ul>
             <li className="flex items-center gap-2 mb-3 cursor-pointer">
-              <AiOutlinePlus /> Add power-Ups
+              <AiOutlinePlus className="text-blue-500" /> Add power-Ups
             </li>
           </ul>
           <h3 className="text-lg font-bold mb-3">Automation</h3>
           <ul>
             <li className="flex items-center gap-2 mb-3 cursor-pointer">
-              <AiOutlinePlus /> Add Automation
+              <AiOutlinePlus className="text-blue-500" /> Add Automation
             </li>
           </ul>
           <h3 className="text-lg font-bold mb-3">Actions</h3>

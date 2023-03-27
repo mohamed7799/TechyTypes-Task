@@ -41,7 +41,7 @@ const ToolBar = () => {
           <UserImage></UserImage>
         </li>
         <li className="toolbar__item">Share</li>
-        <li>
+        <li className="toolbar__item bg-blue-100">
           <BsThreeDotsVertical className="text-blue-500 h-full text-2xl" />
         </li>
       </ul>
